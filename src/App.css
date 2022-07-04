@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +24,113 @@
   color: white;
 }
 
+.App-header h1 {
+  font-family: 'Brush Script MT';
+  text-transform: capitalize;
+}
+
+.App-header p {
+  text-transform: capitalize;
+}
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.container {
+  height: 75vh;
+  width: 95%;
+
+  margin: 1rem auto;
+
+  border: 1px solid red;
+  border-radius: 1rem;
+}
+
+.search-bar {
+  width: 2rem;
+  height: auto;
+
+  margin: 5px auto;
+
+  border: 1px solid red;
+  border-radius: 14px;
+
+  padding: 3px;
+  overflow: hidden;
+
+}
+
+.search-bar svg {
+  cursor: pointer;
+}
+
+.search-bar input {
+  /* width: 90%;
+  height: 100%; */
+
+  border: 1px solid transparent;
+
+  margin-left: 5px;
+}
+
+.search-bar input:focus {
+  border: 1px solid transparent;
+}
+
+.ima {
+  width: 100%;
+  height: 90%;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  /* grid-gap: 3rem 3rem; */
+
+  overflow: scroll;
+  /* z-index: 0; */
+}
+
+.ima button {
+  grid-column-start: 1;
+  grid-column-end: 4;
+
+  margin: 0 1rem;
+
+  text-transform: capitalize;
+
+}
+
+.ft {
+  background-color: #282c34;
+  color: white;
+
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 480px) {
+  .ima {
+    grid-template-columns: auto;
+  }
+
+  .ima button {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    margin: 0 0.3rem;
+  }
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
